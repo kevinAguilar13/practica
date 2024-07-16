@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mi primer practica</title>
+    <title>Formulario de Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>
-        empezamos a aprender
-    </h1>
-    <!-- agregando un comentario -->
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-        Non nobis doloremque nemo. Quia tempora nemo nisi sed, 
-        dolore repellendus deleniti, asperiores aspernatur suscipit fuga 
-        quisquam nihil perspiciatis! Earum, 
-        eos quisquam?
-    </p>
-    <h2>
-        bienvenido
-    </h2>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm" onsubmit="return validateForm()">
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Ingresar</button>
+        </form>
+        <p id="errorMsg" class="error"></p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
